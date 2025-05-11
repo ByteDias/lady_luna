@@ -1,0 +1,23 @@
+<div class="content">
+    <h2>Itens em Estoque</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Quantidade</th>
+          <th>Valor Unitario</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of dados; track item.id) {
+          <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.nome_item }}</td>
+            <td>{{ item.quantidade }} {{ item.unidade_medida }}</td>
+            <td>{{ item.valor_unitario }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+</div>
