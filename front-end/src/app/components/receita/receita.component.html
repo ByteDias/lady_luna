@@ -1,0 +1,54 @@
+<h2 class="titulo-principal">Receitas</h2>
+
+<section class="content">
+    <div class="receita-header">
+        <h2>Criar Receita</h2>
+    </div>
+
+    <form class="form_receita">
+        <div class="form-group">
+            <label for="nome_receita">Nome:</label>
+            <input type="text" id="nome_receita" placeholder="Ex: Bolo de Chocolate">
+        </div>
+        
+        <div class="form-group">
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" rows="3" placeholder="Descreva sua receita..."></textarea>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="tempo_preparo">Tempo de preparo (minutos):</label>
+                <input type="number" id="tempo_preparo" min="1" placeholder="30">
+            </div>
+            
+            <div class="form-group">
+                <label for="porcoes">Porções:</label>
+                <input type="number" id="porcoes" min="1" placeholder="4">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="categoria">Categoria:</label>
+            <select id="categoria">
+                <option value="">Selecione...</option>
+                <option value="sobremesa">Sobremesa</option>
+                <option value="principal">Prato Principal</option>
+                <option value="entrada">Entrada</option>
+                <option value="lanche">Lanche</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Ingredientes">Ingredientes</label>
+            <select id="ingredientes">
+                <option value="">Selecione...</option>
+                @for (item of ingredientes; track item.id) {
+                    <option [value]="item.id">{{ item.nome_item }}</option>
+                }
+            </select>
+        </div>
+        
+        <button type="submit" class="btn-submit">Salvar Receita</button>
+    </form>
+</section>

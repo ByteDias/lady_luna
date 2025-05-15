@@ -7,15 +7,19 @@
           <th>Nome</th>
           <th>Quantidade</th>
           <th>Valor Unitario</th>
+          <th>Data de Validade</th>
+          <th>Fornecedor</th>
         </tr>
       </thead>
       <tbody>
-        @for (item of dados; track item.id) {
+        @for (item of dados; track item.id_item) {
           <tr>
-            <td>{{ item.id }}</td>
+            <td>{{ item.id_item }}</td>
             <td>{{ item.nome_item }}</td>
             <td>{{ item.quantidade }} {{ item.unidade_medida }}</td>
             <td>{{ item.valor_unitario }}</td>
+            <td>{{ item.data_validade  | date:'dd/MM/yyyy'}}</td>
+            <td>{{ item.fornecedor }}</td>
           </tr>
         }
       </tbody>

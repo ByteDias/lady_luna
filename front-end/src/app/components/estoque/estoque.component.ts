@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { ApiServiceService } from '../../services/api.service.service';
+import { CommonModule } from '@angular/common';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'estoque',
-  imports: [],
+  imports: [
+     CommonModule,
+  ],
   templateUrl: './estoque.component.html',
   styleUrl: './estoque.component.css'
 })
@@ -11,8 +14,8 @@ export class EstoqueComponent {
 
   dados: any[] = [];
 
-  constructor(private apiService: ApiServiceService) {
-    this.apiService.getDados().subscribe({
+  constructor(private apiService: ApiService) {
+    this.apiService.getDadosEstoque().subscribe({
       next: (response) => this.dados = response,
       error: (err) => console.error('Erro:', err),
     })

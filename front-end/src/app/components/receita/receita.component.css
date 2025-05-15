@@ -1,0 +1,143 @@
+/* Estilos gerais */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #F2E2C4;
+  padding: 0;
+  margin: 0;
+}
+
+.titulo-principal {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #F2E2C4;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.receita-header {
+  display: flex;
+  background-color: #F2E2C4;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+   h2{
+      background-color: #F2E2C4;
+   }
+}
+
+.receita-header h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+
+.form_receita {
+  display: flex;
+  flex-direction: column;
+  background-color: #F2E2C4;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  background-color: #F2E2C4;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-row {
+  display: flex;
+  background-color: #F2E2C4;
+  gap: 1.5rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+  
+}
+
+
+label {
+  font-weight: 600;
+  background-color: #F2E2C4;
+}
+
+/* Inputs */
+input, textarea, select {
+  padding: 0.8rem 1rem;
+  border: 2px solid #FEF9ED;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botões */
+.btn-receita, .btn-submit {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-receita {
+  color: var(--dark-color);
+}
+
+.btn-receita:hover {
+  background-color: #ffc233;
+  transform: translateY(-2px);
+}
+
+.btn-submit {
+  margin: auto;
+  margin-top: 1rem;
+  align-self: flex-end;
+}
+
+.btn-submit:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .receita-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

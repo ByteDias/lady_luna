@@ -1,0 +1,28 @@
+<div class="content">
+    <h2>Lista de Receitas</h2>
+    <a href="/receita"><button> + Criar Receita</button></a>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Tempo de preparo</th>
+          <th>porções</th>
+          <th>Categoria</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of receitas; track item.id_receita) {
+          <tr>
+            <td>{{ item.id_receita }}</td>
+            <td>{{ item.nome }}</td>
+            <td>{{ item.descricao}}</td>
+            <td>{{ item.tempo_preparo }}</td>
+            <td>{{ item.porcoes }}</td>
+            <td>{{ item.categoria }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+</div>

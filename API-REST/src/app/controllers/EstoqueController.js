@@ -12,14 +12,14 @@ class EstoqueController {
         res.json(row)
     }
     async store(req, res) {
-        const selecao = req.body
-        const row = await EstoqueRepository.create(selecao)
+        const estoque = req.body
+        const row = await EstoqueRepository.create(estoque)
         res.json(row)
     }
     async update(req, res) {
         const id = req.params.id
-        const selecao = req.body
-        const row = await EstoqueRepository.updadeById(selecao, id)
+        const estoque = req.body
+        const row = await EstoqueRepository.updadeById(estoque, id)
         res.json(row)
     }
     async delete(req, res) {

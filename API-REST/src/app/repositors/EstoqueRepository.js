@@ -1,10 +1,10 @@
 import { consult } from "../database/conexao.js"
 
-class SelecaoRepository{
+class EstoqueRepository{
     // CRUD
-    create(selecao){
+    create(produto){
         const sql = "INSERT INTO estoque SET ?;"
-        return consult(sql, selecao, "Erro ao inserir!")
+        return consult(sql, produto, "Erro ao inserir!")
     }
     findAll(){
         const sql = "SELECT * FROM estoque;"
@@ -16,15 +16,18 @@ class SelecaoRepository{
         return consult(sql, id, 'Erro ao encontrar!') 
         
     }
-    updadeById(selecao, id){
+    updadeById(produto, id){
         const sql = "UPDATE estoque SET ? WHERE id = ?;"
-        return consult(sql, [selecao, id], "Erro ao atualizar!")
+        return consult(sql, [produto, id], "Erro ao atualizar!")
+    }
+     updateyReceita(receita){
+
     }
     deleteById(id){
         const sql = "DELETE FROM estoque WHERE id = ?"
         return consult(sql, id, 'Erro ao deletar!')
     }
-
+   
 }
 
-export default new SelecaoRepository;
+export default new EstoqueRepository;
